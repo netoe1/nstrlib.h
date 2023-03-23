@@ -4,53 +4,27 @@
 #include <string.h>
 #include "./getline.h"
 
-int i;
-
 void clearBuffer()
 {
     setbuf(stdin, NULL);
     setbuf(stdout, NULL);
 }
-unsigned int stringIndof(char const *string, char charll_locate)
+
+int indexof_str(char *string, char character)
 {
-    /*
-        OBS:USING SEQUENTIAL SEARCH!
-    */
-    i = 0;
+    int i = 0;
 
-    while (string[i] != charll_locate)
+    for (i = 0; i < strlen(string); i++)
     {
-        i++;
-    }
-
-    return i++;
-}
-void getString_(char *string)
-{ /*Warning, this function can generate memory leak or stack overflow!*/
-
-    /*
-        Use this function to get char pointers with not sizes!
-        This function can be considered unsafe if the vector has a certain size.
-    */
-
-    int i;
-    char aux;
-
-    for (i = 0;; i++)
-    {
-        aux = getchar();
-        if (aux != '\n')
+        if (string[i] == character)
         {
-            string[i] = aux;
-        }
-        else
-        {
-            string[i] = '\0';
-            break;
+            return i;
         }
     }
-    return;
+
+    return -1;
 }
+
 void stringCopy(char *source, char *dest)
 {
     if (sizeof(source) != sizeof(dest))
@@ -67,11 +41,13 @@ void stringCopy(char *source, char *dest)
         i++;
     }
 }
-int stringGetSize(char *buf)
+
+int sizeof_str(char *buf)
 {
     return sizeof(buf);
 }
-void toUpperCase_optimized(char *string)
+
+void toupper_str(char *string)
 {
     int i;
     for (i = 0; i < sizeof(string); i++)
@@ -79,7 +55,8 @@ void toUpperCase_optimized(char *string)
         string[i] = toupper(string[i]);
     }
 }
-void toLowerCase_optimized(char *string)
+
+void tolower_str(char *string)
 {
     int i;
     for (i = 0; i < sizeof(string); i++)
@@ -87,7 +64,8 @@ void toLowerCase_optimized(char *string)
         string[i] = tolower(string[i]);
     }
 }
-int stringCpSizes(char *buf1, char *buf2)
+
+int cmpsizeof_str(char *buf1, char *buf2)
 {
     if (sizeof(buf1) != sizeof(buf2))
     {
@@ -96,6 +74,7 @@ int stringCpSizes(char *buf1, char *buf2)
 
     return 0;
 }
+
 int cmpStrings(char *str1, char *str2)
 {
     if (str1 != NULL && str2 != NULL)
@@ -104,7 +83,7 @@ int cmpStrings(char *str1, char *str2)
         {
             if (str1[i] != str2[i])
             {
-                return -1;
+                return 0;
             }
         }
     }
