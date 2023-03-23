@@ -5,8 +5,10 @@
 </p>
 
 <p>
+
 > The main focus of this library is to <strong>facilitate operations</strong> with strings in C.
 > To make use of it, you can use it in the same folder as your project or replace it wherever you want.
+
 </p>
 
 <p>
@@ -26,7 +28,7 @@ I'm <strong>not a professional in C </strong>, just a lover and fan of it. I am 
 
 </p>
 
-<h2><strong>Be sure to place the library in the same directory as your program!</strong></h2>
+<h2>Be sure to place the library in the same directory as your program!</h2>
 </p>
 
 <p>
