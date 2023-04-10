@@ -4,12 +4,29 @@
 #include <string.h>
 #include "./getline.h"
 
-void clearBuffer()
+void show_str(char *str)
+{
+    int i;
+    if (str != NULL)
+    {
+        for (i = 0; i < sizeof(str); i++)
+        {
+            if (str[i] == '\0')
+            {
+                printf("\\0");
+            }
+            else
+            {
+                printf("%c", str[i]);
+            }
+        }
+    }
+}
+void cls_buf()
 {
     setbuf(stdin, NULL);
     setbuf(stdout, NULL);
 }
-
 int indexof_str(char *string, char character)
 {
     int i = 0;
@@ -24,7 +41,6 @@ int indexof_str(char *string, char character)
 
     return -1;
 }
-
 void stringCopy(char *source, char *dest)
 {
     if (sizeof(source) != sizeof(dest))
@@ -41,12 +57,10 @@ void stringCopy(char *source, char *dest)
         i++;
     }
 }
-
 int sizeof_str(char *buf)
 {
     return sizeof(buf);
 }
-
 void toupper_str(char *string)
 {
     int i;
@@ -55,7 +69,6 @@ void toupper_str(char *string)
         string[i] = toupper(string[i]);
     }
 }
-
 void tolower_str(char *string)
 {
     int i;
@@ -64,7 +77,6 @@ void tolower_str(char *string)
         string[i] = tolower(string[i]);
     }
 }
-
 int cmpsizeof_str(char *buf1, char *buf2)
 {
     if (sizeof(buf1) != sizeof(buf2))
@@ -74,8 +86,7 @@ int cmpsizeof_str(char *buf1, char *buf2)
 
     return 0;
 }
-
-int cmpStrings(char *str1, char *str2)
+int cmp_str(char *str1, char *str2)
 {
     if (str1 != NULL && str2 != NULL)
     {
