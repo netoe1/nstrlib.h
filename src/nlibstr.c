@@ -5,7 +5,7 @@
 #include "getline.h"
 #include "nlibstr.h"
 
-void show_str(char *str)
+void nlibstr_show_str(char *str)
 {
     int i;
     if (str != NULL)
@@ -23,12 +23,12 @@ void show_str(char *str)
         }
     }
 }
-void cls_buf()
+void nlibstr_clear_buffers()
 {
     setbuf(stdin, NULL);
     setbuf(stdout, NULL);
 }
-int indexof_str(char *string, char character)
+int nlibstr_indexof_str(char *string, char character)
 {
     int i = 0;
 
@@ -42,7 +42,7 @@ int indexof_str(char *string, char character)
 
     return -1;
 }
-void stringCopy(char *source, char *dest)
+void nlibstr_stringCopy(char *source, char *dest)
 {
     if (sizeof(source) != sizeof(dest))
     {
@@ -58,11 +58,11 @@ void stringCopy(char *source, char *dest)
         i++;
     }
 }
-int sizeof_str(char *buf)
+int nlibstr_sizeof_str(char *buf)
 {
     return sizeof(buf);
 }
-void toupper_str(char *string)
+void nlibstr_toupper_str(char *string)
 {
     int i;
     for (i = 0; i < sizeof(string); i++)
@@ -70,7 +70,7 @@ void toupper_str(char *string)
         string[i] = toupper(string[i]);
     }
 }
-void tolower_str(char *string)
+void nlibstr_tolower_str(char *string)
 {
     int i;
     for (i = 0; i < sizeof(string); i++)
@@ -78,7 +78,7 @@ void tolower_str(char *string)
         string[i] = tolower(string[i]);
     }
 }
-int cmpsizeof_str(char *buf1, char *buf2)
+int nlibstr_cmpsizeof_str(char *buf1, char *buf2)
 {
     if (sizeof(buf1) != sizeof(buf2))
     {
@@ -87,7 +87,7 @@ int cmpsizeof_str(char *buf1, char *buf2)
 
     return 0;
 }
-int cmp_str(char *str1, char *str2)
+int nlibstr_cmp_str(char *str1, char *str2)
 {
     if (str1 != NULL && str2 != NULL)
     {
@@ -107,7 +107,7 @@ int cmp_str(char *str1, char *str2)
     return 1;
 }
 
-void dynamic_cpystr(char *str_dinamic, char *content)
+void nlibstr_dynamic_cpystr(char *str_dinamic, char *content)
 {
     int i;
     str_dinamic = (char *)malloc(sizeof(str_dinamic));
@@ -117,4 +117,35 @@ void dynamic_cpystr(char *str_dinamic, char *content)
     {
         str_dinamic[i] = content[i];
     }
+}
+
+int nlibstr_index_of(const char find, const char *string)
+{
+    int i = 0;
+    for (i = 0; i < sizeof(string); i++)
+    {
+        if (string[i] == find)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
+void nlibstr_parse_non_spaces(char *string, char *string_dinamic)
+{
+    int i = 0;
+
+    string_dinamic = (char *)malloc(1);
+
+    for (i = 0; i < sizeof(string); i++)
+    {
+        if (string[i] != ' ')
+        {
+            string_dinamic[i] = string[i];
+            string_dinamic = (char *)realloc(string_dinamic, i + 1);
+        }
+    }
+
+    string_dinamic[++i] = '\0';
 }
