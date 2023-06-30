@@ -5,6 +5,13 @@
 #include "getline.h"
 #include "nlibstr.h"
 
+int nlibstr_countstr(char *str)
+{
+    int i;
+    for (i = 0; str[i] != '\0'; i++)
+        ;
+    return i;
+}
 void nlibstr_show_str(char *str)
 {
     int i;
@@ -148,4 +155,23 @@ void nlibstr_parse_non_spaces(char *string, char *string_dinamic)
     }
 
     string_dinamic[++i] = '\0';
+}
+
+char *nlibstr_getline()
+{
+    char buffer[1024];
+    char res;
+    setbuf(stdin, NULL);
+    fgets(buffer, strlen(buffer) - 1, stdin);
+    res = (char *)malloc(sizeof(char) * strlen(buffer));
+    strncpy(res, buffer, strlen(buffer));
+    return res;
+}
+
+int nlibstr_countstr(char *str)
+{
+    int i;
+    for (i = 0; str[i] != '\0'; i++)
+        ;
+    return i + 1;
 }

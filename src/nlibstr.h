@@ -8,7 +8,7 @@
 #include "getline.h"
 
 void nlibstr_show_str(char *str);
-void nlibstr_clear_buffers(char *str);
+void nlibstr_clear_buffers();
 int nlibstr_indexof_str(char *string, char character);
 void nlibstr_stringCopy(char *source, char *dest);
 int nlibstr_sizeof_str(char *buf);
@@ -19,4 +19,8 @@ int nlibstr_cmp_str(char *str1, char *str2);
 void nlibstr_dynamic_cpystr(char *str_dinamic, char *content); // Warning! // Non-tested yet...
 int nlibstr_index_of(const char find, const char *string);
 void nlibstr_parse_non_spaces(char *string, char *string_dinamic); // Non-tested yet...
-#endif                                                             /*NLIBSTR_H_*/
+
+char *nlibstr_getline();         // Warning!, non-tested yet...
+int nlibstr_countstr(char *str); // strlen() "source" code
+
+#endif /*NLIBSTR_H_*/
