@@ -1,9 +1,9 @@
-#ifndef __GETLINE_H_
-#define __GETLINE_H_
+#ifndef GETLINE_H
+#define GETLINE_H
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "getline.h"
+#include "../include/getline.h"
 
 size_t getline_px0(char **lineptr, size_t *n, FILE *stream);
 #endif

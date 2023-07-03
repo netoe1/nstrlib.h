@@ -2,16 +2,9 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
-#include "getline.h"
-#include "nlibstr.h"
+#include "../include/getline.h"
+#include "../include/nstrlib.h"
 
-int nlibstr_countstr(char *str)
-{
-    int i;
-    for (i = 0; str[i] != '\0'; i++)
-        ;
-    return i;
-}
 void nlibstr_show_str(char *str)
 {
     int i;
@@ -113,7 +106,6 @@ int nlibstr_cmp_str(char *str1, char *str2)
 
     return 1;
 }
-
 void nlibstr_dynamic_cpystr(char *str_dinamic, char *content)
 {
     int i;
@@ -125,7 +117,6 @@ void nlibstr_dynamic_cpystr(char *str_dinamic, char *content)
         str_dinamic[i] = content[i];
     }
 }
-
 int nlibstr_index_of(const char find, const char *string)
 {
     int i = 0;
@@ -138,7 +129,6 @@ int nlibstr_index_of(const char find, const char *string)
     }
     return -1;
 }
-
 void nlibstr_parse_non_spaces(char *string, char *string_dinamic)
 {
     int i = 0;
@@ -156,18 +146,16 @@ void nlibstr_parse_non_spaces(char *string, char *string_dinamic)
 
     string_dinamic[++i] = '\0';
 }
-
 char *nlibstr_getline()
 {
     char buffer[1024];
-    char res;
+    char *res;
     setbuf(stdin, NULL);
     fgets(buffer, strlen(buffer) - 1, stdin);
     res = (char *)malloc(sizeof(char) * strlen(buffer));
     strncpy(res, buffer, strlen(buffer));
     return res;
 }
-
 int nlibstr_countstr(char *str)
 {
     int i;
