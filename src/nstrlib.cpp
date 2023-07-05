@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
-#include "../include/getline.h"
-#include "../include/nstrlib.h"
+#include "../include/getline.hpp"
+#include "../include/nstrlib.hpp"
 
 void nlibstr_show_str(char *str)
 {

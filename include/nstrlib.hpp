@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
-#include "../include/getline.h"
+#include "../include/getline.hpp"
 
 int nlibstr_countstr(char *str);
 void nlibstr_show_str(char *str);

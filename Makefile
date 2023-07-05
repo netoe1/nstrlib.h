@@ -1,6 +1,6 @@
  
 all:
-	gcc -c ./src/nstrlib.c -o ./obj/nstrlib.o
+	g++ -c ./src/nstrlib.cpp -o ./obj/nstrlib.o
 
 run:
 	
