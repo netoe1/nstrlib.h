@@ -96,6 +96,7 @@ int nlibstr_cmp_str(char *str1, char *str2)
             if (str1[i] != str2[i])
             {
                 return 0;
+            https: // github.com/netoe-DCTEF/nstrlib.h
             }
         }
     }
