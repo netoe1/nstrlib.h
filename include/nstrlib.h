@@ -7,20 +7,19 @@
 #include <string.h>
 #include "../include/getline.h"
 
-int nlibstr_countstr(char *str);
-void nlibstr_show_str(char *str);
-void nlibstr_clear_buffers();
-int nlibstr_indexof_str(char *string, char character);
-void nlibstr_stringCopy(char *source, char *dest);
-int nlibstr_sizeof_str(char *buf);
-void nlibstr_toupper_str(char *string);
-void nlibstr_tolower_str(char *string);
-int nlibstr_cmpsizeof_str(char *buf1, char *buf2);
-int nlibstr_cmp_str(char *str1, char *str2);
-void nlibstr_dynamic_cpystr(char *str_dinamic, char *content); // Warning! // Non-tested yet...
-int nlibstr_index_of(const char find, const char *string);
-void nlibstr_parse_non_spaces(char *string, char *string_dinamic); // Non-tested yet...
-char *nlibstr_getline();                                           // Warning!, non-tested yet...
-                                                                   // strlen() "source" code
-
-#endif /*NLIBSTR_H_*/
+int NLSTR_countstr(char *str);
+void NLSTR_show_str(char *str);
+void NLSTR_clear_buffers();
+int NLSTR_indexof_str(char *string, char character);
+void NLSTR_stringCopy(char *source, char *dest);
+int NLSTR_sizeof_str(char *buf);
+void NLSTR_toupper_str(char *string);
+void NLSTR_tolower_str(char *string);
+int NLSTR_cmpsizeof_str(char *buf1, char *buf2);
+int NLSTR_cmp_str(char *str1, char *str2);
+void NLSTR_dynamic_cpystr(char *str_dinamic, char *content); // Warning! // Non-tested yet...
+int NLSTR_index_of(const char find, const char *string);
+void NLSTR_parse_non_spaces(char *string, char *string_dinamic); // Non-tested yet...
+char *NLSTR_getline();                                           // Warning!, non-tested yet...
+int NLSTR_ConcatStr(char *str1, char *str2, char *p);            /*Warning, this function uses dinamic allocation. Please, free() the pointer after usage, to avoid memory leaks*/
+#endif                                                           /*NLIBSTR_H_*/
