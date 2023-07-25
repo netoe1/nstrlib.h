@@ -180,3 +180,15 @@ int NLSTR_ConcatStr(char *str1, char *str2, char *p)
     }
     return 0;
 }
+
+int NLSTR_invertStr(char *str)
+{
+    if (str != NULL)
+    {
+        for (int i = 0; i < strlen(str); i++)
+        {
+            str[i] = str[strlen(str) - i - 1];
+        }
+    }
+    return 0;
+}
