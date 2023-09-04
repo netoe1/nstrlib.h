@@ -1,4 +1,4 @@
-#ifndef NLIBSTR_H_
+#ifndef NLIBSTR_H
 #define NLIBSTR_H
 
 #include <stdio.h>
@@ -9,7 +9,7 @@
 
 int NLSTR_countstr(char *str);
 void NLSTR_show_str(char *str);
-void NLSTR_clear_buffers();
+void NLSTR_clearBuffers();
 int NLSTR_indexof_str(char *string, char character);
 void NLSTR_stringCopy(char *source, char *dest);
 int NLSTR_sizeof_str(char *buf);
@@ -23,4 +23,7 @@ void NLSTR_parse_non_spaces(char *string, char *string_dinamic); // Non-tested y
 char *NLSTR_getline();                                           // Warning!, non-tested yet...
 int NLSTR_ConcatStr(char *str1, char *str2, char *p);            /*Warning, this function uses dinamic allocation. Please, free() the pointer after usage, to avoid memory leaks*/
 int NLSTR_invertStr(char *str);
+int NLSTR_countStrings(char **ptr);
+void NLSTR_clearInputBuffer();
+void NLSTR_clearOutputBuffer();
 #endif /*NLIBSTR_H_*/

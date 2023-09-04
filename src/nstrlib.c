@@ -23,7 +23,7 @@ void NLSTR_show_str(char *str)
         }
     }
 }
-void NLSTR_clear_buffers()
+void NLSTR_clearBuffers()
 {
     setbuf(stdin, NULL);
     setbuf(stdout, NULL);
@@ -154,6 +154,7 @@ char *NLSTR_getline()
     fgets(buffer, strlen(buffer) - 1, stdin);
     res = (char *)malloc(sizeof(char) * strlen(buffer));
     strncpy(res, buffer, strlen(buffer));
+    res[sizeof(res)] = '\0';
     return res;
 }
 int NLSTR_countstr(char *str)
@@ -191,4 +192,33 @@ int NLSTR_invertStr(char *str)
         }
     }
     return 0;
+}
+
+int NLSTR_countStrings(char **ptr)
+{
+    int len = 0;
+    if (ptr != NULL)
+    {
+        while (ptr[len] != NULL)
+        {
+            len++;
+        }
+        return len;
+    }
+    return -1;
+}
+
+void NLSTR_clearInputBuffer()
+{
+    setbuf(stdin, NULL);
+}
+
+void NLSTR_clearOutputBuffer()
+{
+    setbuf(stdout, NULL);
+}
+
+void NLSTR_clearErrorBuffer()
+{
+    setbuf(stderr, NULL);
 }
