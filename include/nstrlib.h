@@ -26,4 +26,6 @@ int NLSTR_invertStr(char *str);
 int NLSTR_countStrings(char **ptr);
 void NLSTR_clearInputBuffer();
 void NLSTR_clearOutputBuffer();
+
+int NLSTR_number_str_to_int(char *number_in_str);
 #endif /*NLIBSTR_H_*/

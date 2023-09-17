@@ -4,6 +4,7 @@
 #include <string.h>
 #include "../include/getline.h"
 #include "../include/nstrlib.h"
+#include "../include/numbers.h"
 
 void NLSTR_show_str(char *str)
 {
@@ -221,4 +222,10 @@ void NLSTR_clearOutputBuffer()
 void NLSTR_clearErrorBuffer()
 {
     setbuf(stderr, NULL);
+}
+
+int NLSTR_number_str_to_int(char *number_in_str)
+{
+    int initialPos = strlen(number_in_str);
+    const int decimal = 10;
 }
