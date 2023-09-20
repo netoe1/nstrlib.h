@@ -1,5 +1,5 @@
-#ifndef NLIBSTR_H
-#define NLIBSTR_H
+#ifndef NSTRLIB_H
+#define NSTRLIB_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,7 +7,7 @@
 #include <string.h>
 #include "../include/getline.h"
 
-int NLSTR_countstr(char *str);
+int NLSTR_countStr(char *str);
 void NLSTR_show_str(char *str);
 void NLSTR_clearBuffers();
 int NLSTR_indexof_str(char *string, char character);

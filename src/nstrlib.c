@@ -158,14 +158,13 @@ char *NLSTR_getline()
     res[sizeof(res)] = '\0';
     return res;
 }
-int NLSTR_countstr(char *str)
+int NLSTR_countStr(char *str)
 {
     int i;
     for (i = 0; str[i] != '\0'; i++)
         ;
     return i + 1;
 }
-
 int NLSTR_ConcatStr(char *str1, char *str2, char *p)
 {
 
@@ -182,7 +181,6 @@ int NLSTR_ConcatStr(char *str1, char *str2, char *p)
     }
     return 0;
 }
-
 int NLSTR_invertStr(char *str)
 {
     if (str != NULL)
@@ -194,7 +192,6 @@ int NLSTR_invertStr(char *str)
     }
     return 0;
 }
-
 int NLSTR_countStrings(char **ptr)
 {
     int len = 0;
@@ -208,22 +205,18 @@ int NLSTR_countStrings(char **ptr)
     }
     return -1;
 }
-
 void NLSTR_clearInputBuffer()
 {
     setbuf(stdin, NULL);
 }
-
 void NLSTR_clearOutputBuffer()
 {
     setbuf(stdout, NULL);
 }
-
 void NLSTR_clearErrorBuffer()
 {
     setbuf(stderr, NULL);
 }
-
 int NLSTR_number_str_to_int(char *number_in_str)
 {
     int initialPos = strlen(number_in_str);
