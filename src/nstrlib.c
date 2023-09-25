@@ -29,7 +29,7 @@ void NLSTR_clearBuffers()
     setbuf(stdin, NULL);
     setbuf(stdout, NULL);
 }
-int NLSTR_indexof_str(char *string, char character)
+int NLSTR_indexof(char *string, char character)
 {
     int i = 0;
 
@@ -59,11 +59,11 @@ void NLSTR_stringCopy(char *source, char *dest)
         i++;
     }
 }
-int NLSTR_sizeof_str(char *buf)
+int NLSTR_sizeof(char *buf)
 {
     return sizeof(buf);
 }
-void NLSTR_toupper_str(char *string)
+void NLSTR_toupper(char *string)
 {
     int i;
     for (i = 0; i < sizeof(string); i++)
@@ -71,7 +71,7 @@ void NLSTR_toupper_str(char *string)
         string[i] = toupper(string[i]);
     }
 }
-void NLSTR_tolower_str(char *string)
+void NLSTR_tolower(char *string)
 {
     int i;
     for (i = 0; i < sizeof(string); i++)
@@ -79,7 +79,7 @@ void NLSTR_tolower_str(char *string)
         string[i] = tolower(string[i]);
     }
 }
-int NLSTR_cmpsizeof_str(char *buf1, char *buf2)
+int NLSTR_cmpsizeof(char *buf1, char *buf2)
 {
     if (sizeof(buf1) != sizeof(buf2))
     {
@@ -88,7 +88,7 @@ int NLSTR_cmpsizeof_str(char *buf1, char *buf2)
 
     return 0;
 }
-int NLSTR_cmp_str(char *str1, char *str2)
+int NLSTR_cmp(char *str1, char *str2)
 {
     if (str1 != NULL && str2 != NULL)
     {
@@ -107,7 +107,7 @@ int NLSTR_cmp_str(char *str1, char *str2)
 
     return 1;
 }
-void NLSTR_dynamic_cpystr(char *str_dinamic, char *content)
+void NLSTR_dynamic_cpy(char *str_dinamic, char *content)
 {
     int i;
     str_dinamic = (char *)malloc(sizeof(str_dinamic));
@@ -118,7 +118,7 @@ void NLSTR_dynamic_cpystr(char *str_dinamic, char *content)
         str_dinamic[i] = content[i];
     }
 }
-int NLSTR_index_of(const char find, const char *string)
+int NLSTR_indexof(const char find, const char *string)
 {
     int i = 0;
     for (i = 0; i < sizeof(string); i++)
@@ -158,14 +158,14 @@ char *NLSTR_getline()
     res[sizeof(res)] = '\0';
     return res;
 }
-int NLSTR_countStr(char *str)
+int NLSTR_Count(char *str)
 {
     int i;
     for (i = 0; str[i] != '\0'; i++)
         ;
     return i + 1;
 }
-int NLSTR_ConcatStr(char *str1, char *str2, char *p)
+int NLSTR_Concat(char *str1, char *str2, char *p)
 {
 
     if (str1 != NULL && str2 != NULL && p != NULL)
@@ -181,7 +181,7 @@ int NLSTR_ConcatStr(char *str1, char *str2, char *p)
     }
     return 0;
 }
-int NLSTR_invertStr(char *str)
+int NLSTR_invert(char *str)
 {
     if (str != NULL)
     {

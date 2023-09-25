@@ -15,3 +15,5 @@ testingRun:
 clean:
 	rm -rf ./obj/*.o
 	rm -rf ./testing/*.o
+obj:
+	mkdir obj
