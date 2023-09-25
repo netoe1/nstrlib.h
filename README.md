@@ -1,5 +1,5 @@
 <p>
-<h1>Nstrlib, a static simple library for C:</h1>
+<h1>NSTRLIB, a static simple library for C:</h1>
 <h5>We not recommend the use in C++!</h5>
 <h2>This library may be a auxiliar library for std's string in C!</h2>
 </p>
@@ -23,7 +23,7 @@ I'm <strong>not a professional in C </strong>, just a lover and fan of it. I am 
 <p>
 
 ```c
-#include "./nlibstr.h"
+#include "nstrlib.h"
 ```
 
 </p>
