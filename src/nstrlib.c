@@ -2,9 +2,13 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+#include <errno.h>
+
 #include "../include/getline.h"
 #include "../include/nstrlib.h"
 #include "../include/numbers.h"
+
+#define ILOOP 1
 
 void NLSTR_show_str(char *str)
 {
